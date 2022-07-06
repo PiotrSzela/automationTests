@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0acb0bbd-ac8d-40cf-b24f-3f49b2f3d018" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/AutomationpracticeSiteTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AutomationpracticeSiteTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AutomationpracticeSiteTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,13 +41,12 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Console Colors&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="AutomationpracticeSiteTests.checkAddProductToCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AutomationpracticeSiteTests.checkDeleteProductFromCart">
+    <configuration name="AutomationpracticeSiteTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Selenium_And_JUnit_Tests" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AutomationpracticeSiteTests" />
-      <option name="METHOD_NAME" value="checkAddProductToCart" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -99,11 +93,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AutomationpracticeSiteTests.checkDeleteProductFromCart" />
+        <item itemvalue="JUnit.AutomationpracticeSiteTests.checkContactUsSiteFromMainSite" />
+        <item itemvalue="JUnit.AutomationpracticeSiteTests" />
         <item itemvalue="JUnit.AutomationpracticeSiteTests.checkIfNoLogin" />
         <item itemvalue="JUnit.AutomationpracticeSiteTests.logInTest" />
-        <item itemvalue="JUnit.AutomationpracticeSiteTests.checkDeleteProductFromCart" />
-        <item itemvalue="JUnit.AutomationpracticeSiteTests.checkAddProductToCart" />
-        <item itemvalue="JUnit.AutomationpracticeSiteTests.checkContactUsSiteFromMainSite" />
       </list>
     </recent_temporary>
   </component>
