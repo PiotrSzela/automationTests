@@ -5,11 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Random;
 
 public class AutomationpracticeSiteTests {
 
@@ -93,7 +95,7 @@ public class AutomationpracticeSiteTests {
 
     // Test 4  -------------------------------------------------
     @Test
-    void checkContactUsSiteFromMainSite() {
+    void checkContactUsSiteFromMainSite(){
         String checkMainSite = driver.getCurrentUrl();
         Assertions.assertEquals("http://automationpractice.com/index.php",checkMainSite);
         WebElement gotoContactUsSite = driver.findElement(By.cssSelector("#contact-link"));
@@ -113,6 +115,7 @@ public class AutomationpracticeSiteTests {
         gotoMainSite.click();
         String checkMainSiteUrl = driver.getCurrentUrl();
         Assertions.assertEquals("http://automationpractice.com/index.php", checkMainSiteUrl,"wrong URL");
+
     }
     // Test 6  -------------------------------------------------
     @Test
@@ -120,16 +123,16 @@ public class AutomationpracticeSiteTests {
         WebElement product = driver.findElement(By.xpath("//*[@id=\"homefeatured\"]/li[1]"));
         Actions moveMouse = new Actions(driver);
         moveMouse.moveToElement(product);
-        WebElement addProduct = driver.findElement(By.xpath("//*[@id=\"homefeatured\"]/li[1]/div/div[2]/div[2]/a[1]/span"));
-        moveMouse.click(addProduct);
-        WebElement isAddToCart = driver.findElement(By.xpath("//*[@id=\"layer_cart\"]/div[1]/div[2]/h2/span[2]"));
-        Assertions.assertEquals("There is 1 item in your cart.",isAddToCart.getText(),"don't find item");
+        WebElement addProductToCart = driver.findElement(By.xpath("//*[@id=\"homefeatured\"]/li[1]/div/div[2]/div[2]/a[1]/span"));
+        moveMouse.click(addProductToCart);
+        WebElement isAddToCart = driver.findElement(By.className("icon-ok"));
+        Assertions.assertNotNull(isAddToCart);
 
     }
 
     // Test 7  -------------------------------------------------
     @Test
-    void checkDeleteProductFromCart() {
+    void checkDeleteProductFromCart(){
         WebElement searchItemToAdd = driver.findElement(By.id("search_query_top"));
         searchItemToAdd.click();
         searchItemToAdd.sendKeys("Blouse");
@@ -149,33 +152,60 @@ public class AutomationpracticeSiteTests {
         WebElement isCartEmpty = driver.findElement(By.cssSelector("span.ajax_cart_quantity.unvisible"));
         Assertions.assertTrue(isCartEmpty.isEnabled());
 
+
     }
 
     // Test 8  -------------------------------------------------
     @Test
-    void logInTest() {
+    void checkAndPrintMonthInRegisterSite(){
         goToLogInSite();
-        login("test@softie.pl","1qaz!QAZ");
-        Assertions.assertEquals("My account",driver.findElement(By.className("navigation_page")).getText(),"log in is impossible");
+        createAccountRandomEmail();
+        Select month = new Select(driver.findElement(By.id("months")));
+        List<WebElement> months = month.getOptions().subList(1,13);
+        Assertions.assertEquals(12,months.size(),"Wrong months size");
+        for (int i = 0; i < months.size(); i++) {
+            System.out.println(months.get(i).getText());
+        }
     }
+
+    // Test 9  -------------------------------------------------
+    @Test
+    void logInTestWithCorrectData(){
+        goToLogInSite();
+        loginWithCorrectData("test@softie.pl","1qaz!QAZ");
+        Assertions.assertEquals("My account",driver.findElement(By.className("navigation_page")).getText(),"log in is impossible");
+
+    }
+
 
     // Functions -----------------------------------------------
     // #########################################################
-    // login ------------------------------------------------
-    public void login(String email,String psswrd){
+    // loginWithCorrectData ------------------------------------------------
+    public void loginWithCorrectData(String email,String psswrd){
         WebElement findPasswordInput = driver.findElement(By.id("passwd"));
-        WebElement findLoginInput = driver.findElement(By.id("email"));
-        WebElement signIn = driver.findElement(By.id("SubmitLogin"));
         findPasswordInput.sendKeys(psswrd);
+        WebElement findLoginInput = driver.findElement(By.id("email"));
         findLoginInput.sendKeys(email);
+        WebElement signIn = driver.findElement(By.id("SubmitLogin"));
         signIn.click();
 
     }
 
+    // loginWithRandomData -------------------------------------------------
+    public void createAccountRandomEmail() {
+        WebElement createAccountEmailInput = driver.findElement(By.id("email_create"));
+        WebElement createAccountSubmitButton = driver.findElement(By.id("SubmitCreate"));
+        Random random = new Random();
+        String randomEmail = "Witcher" + random.nextInt(1000) + "@Rivia" + random.nextInt(100) + ".com";
+        createAccountEmailInput.sendKeys(randomEmail);
+        createAccountSubmitButton.click();
+    }
+
     // goToLoginSite ------------------------------------------------
     public static void goToLogInSite(){
-        WebElement loginButton = driver.findElement(By.cssSelector(".login"));
-        loginButton.click();
+        WebElement signInButton = driver.findElement(By.className("login"));
+        signInButton.click();
+
     }
 
 }

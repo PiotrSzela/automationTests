@@ -41,12 +41,23 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Console Colors&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.AutomationpracticeSiteTests.checkDeleteProductFromCart">
-    <configuration name="AutomationpracticeSiteTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AutomationpracticeSiteTests.checkAndPrintMonthInRegisterSite">
+    <configuration name="AutomationpracticeSiteTests.checkAddProductToCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Selenium_And_JUnit_Tests" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AutomationpracticeSiteTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="checkAddProductToCart" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AutomationpracticeSiteTests.checkAndPrintMonthInRegisterSite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Selenium_And_JUnit_Tests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AutomationpracticeSiteTests" />
+      <option name="METHOD_NAME" value="checkAndPrintMonthInRegisterSite" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -71,16 +82,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AutomationpracticeSiteTests.checkIfNoLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Selenium_And_JUnit_Tests" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AutomationpracticeSiteTests" />
-      <option name="METHOD_NAME" value="checkIfNoLogin" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AutomationpracticeSiteTests.logInTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Selenium_And_JUnit_Tests" />
       <option name="PACKAGE_NAME" value="" />
@@ -93,11 +94,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AutomationpracticeSiteTests.checkDeleteProductFromCart" />
-        <item itemvalue="JUnit.AutomationpracticeSiteTests.checkContactUsSiteFromMainSite" />
-        <item itemvalue="JUnit.AutomationpracticeSiteTests" />
-        <item itemvalue="JUnit.AutomationpracticeSiteTests.checkIfNoLogin" />
+        <item itemvalue="JUnit.AutomationpracticeSiteTests.checkAndPrintMonthInRegisterSite" />
+        <item itemvalue="JUnit.AutomationpracticeSiteTests.checkAddProductToCart" />
         <item itemvalue="JUnit.AutomationpracticeSiteTests.logInTest" />
+        <item itemvalue="JUnit.AutomationpracticeSiteTests.checkContactUsSiteFromMainSite" />
+        <item itemvalue="JUnit.AutomationpracticeSiteTests.checkDeleteProductFromCart" />
       </list>
     </recent_temporary>
   </component>
